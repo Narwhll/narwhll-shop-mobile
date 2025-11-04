@@ -8,9 +8,9 @@ class MyHomePage extends StatelessWidget {
   final String kelas = "E";
 
   final List<ItemHomePage> items = [
-    ItemHomePage("All Products", Icons.newspaper),
-    ItemHomePage("My Products", Icons.add, warna: const Color.fromARGB(255, 69, 156, 72)),
-    ItemHomePage("Create Product", Icons.logout, warna: const Color.fromARGB(255, 207, 56, 45)),
+    ItemHomePage("All Products", Icons.shopping_cart_outlined),
+    ItemHomePage("My Products", Icons.sports_baseball_outlined, warna: const Color.fromARGB(255, 69, 156, 72)),
+    ItemHomePage("Create Product", Icons.add_circle_outline, warna: const Color.fromARGB(255, 207, 56, 45)),
   ];
 
 
@@ -91,10 +91,7 @@ class InfoCard extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
-                Text(
-                  title,
-                  style: const TextStyle(fontWeight: FontWeight.bold),
-                ),
+                Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8.0),
                 Text(content),
               ],
