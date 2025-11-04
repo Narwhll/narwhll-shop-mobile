@@ -9,8 +9,8 @@ class MyHomePage extends StatelessWidget {
 
   final List<ItemHomePage> items = [
     ItemHomePage("All Products", Icons.newspaper),
-    ItemHomePage("My Products", Icons.add),
-    ItemHomePage("Create Product", Icons.logout),
+    ItemHomePage("My Products", Icons.add, warna: const Color.fromARGB(255, 69, 156, 72)),
+    ItemHomePage("Create Product", Icons.logout, warna: const Color.fromARGB(255, 207, 56, 45)),
   ];
 
 
@@ -107,8 +107,9 @@ class InfoCard extends StatelessWidget {
 class ItemHomePage {
   final String name;
   final IconData icon;
+  final Color? warna;
 
-  ItemHomePage(this.name, this.icon);
+  ItemHomePage(this.name, this.icon, {this.warna});
 }
 
 class ItemCard extends StatelessWidget {
@@ -118,7 +119,7 @@ class ItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-        color: Theme.of(context).colorScheme.secondary,
+        color: item.warna ?? Theme.of(context).colorScheme.secondary,
 
         borderRadius: BorderRadius.circular(12),
         child: InkWell(

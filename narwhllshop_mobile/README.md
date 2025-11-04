@@ -1,16 +1,12 @@
-# narwhllshop_mobile
 
-A new Flutter project.
 
-## Getting Started
+<h1>TUGAS 7</h1>
+<hr/>
 
-This project is a starting point for a Flutter application.
+1. Jelaskan apa itu widget tree pada Flutter dan bagaimana hubungan parent-child (induk-anak) bekerja antar widget.:
 
-A few resources to get you started if this is your first Flutter project:
+Widget tree adalah sebuah struktur yang menampung beberapa widget. Parent dari widget tree berfungsi untuk mengatur letak/posisi dari anak anaknya (widget). Bisa dibilang secara struktural widget tree ini mirip div di html.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. Sebutkan semua widget yang kamu gunakan dalam proyek ini dan jelaskan fungsinya.:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
