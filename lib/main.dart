@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:narwhllshop_mobile/menu.dart';
+import 'package:narwhllshop_mobile/screens/menu.dart';
 
 
 void main() {

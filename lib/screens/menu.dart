@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:narwhllshop_mobile/widgets/left_drawer.dart';
+import 'package:narwhllshop_mobile/widgets/product_card.dart';
+
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});
@@ -8,7 +11,7 @@ class MyHomePage extends StatelessWidget {
   final String kelas = "E";
 
   final List<ItemHomePage> items = [
-    ItemHomePage("All Products", Icons.shopping_cart_outlined),
+    ItemHomePage("All Products", Icons.shopping_cart_outlined, warna: Colors.blue),
     ItemHomePage("My Products", Icons.sports_baseball_outlined, warna: const Color.fromARGB(255, 69, 156, 72)),
     ItemHomePage("Create Product", Icons.add_circle_outline, warna: const Color.fromARGB(255, 207, 56, 45)),
   ];
@@ -24,6 +27,7 @@ class MyHomePage extends StatelessWidget {
           // Warna latar navbar diambil dari color scheme primary aplikasi
           backgroundColor: Theme.of(context).colorScheme.primary,
         ),
+        drawer: LeftDrawer(),
         // Body halaman dengan padding
         body: Padding(
             padding: const EdgeInsets.all(16.0),
@@ -108,44 +112,3 @@ class ItemHomePage {
 
   ItemHomePage(this.name, this.icon, {this.warna});
 }
-
-class ItemCard extends StatelessWidget {
-  final ItemHomePage item;
-  const ItemCard(this.item, {super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-        color: item.warna ?? Theme.of(context).colorScheme.secondary,
-
-        borderRadius: BorderRadius.circular(12),
-        child: InkWell(
-            onTap: () {
-              ScaffoldMessenger.of(context)
-                ..hideCurrentSnackBar()
-                ..showSnackBar(
-                    SnackBar(content: Text("Kamu telah menekan tombol ${item.name}!"))
-                );
-            },
-            child: Container(
-                padding: const EdgeInsets.all(8),
-                child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(item.icon, color: Colors.white, size: 30.0),
-                        const Padding(padding: EdgeInsets.all(3)),
-                        Text(
-                          item.name,
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(color: Colors.white),
-                        )
-                      ],
-                    )
-                )
-            )
-        )
-    );
-  }
-}
-
