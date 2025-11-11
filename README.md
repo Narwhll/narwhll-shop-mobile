@@ -42,3 +42,24 @@
 ### 6. Jelaskan konsep "hot reload" di Flutter dan bagaimana bedanya dengan "hot restart".
 
 - Kalo hot reload, dia membangun ulang widget, tapi mempertahankan state, sedangkan kalo restart, dia bener bener bangun ulang seluruh app, jadi semua state juga ulang dari awal.
+
+
+## TUGAS 8
+
+### 1. Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement() pada Flutter. Dalam kasus apa sebaiknya masing-masing digunakan pada aplikasi Football Shop kamu?
+
+- Kalo yang .push(), dia menambah page web ke atas stack, dan mempertahankan stack yang sudah ada, sehingga ketika menekan back button, dia kembali ke page terakhir yang dikunjungi. Kalau yang .pushReplacement(), dia menghapus stack dan menggantinya dengan page yang dituju, sehingga jika setelahnya menekan back button, dia akan keluar dari app karna tidak ada page tersisa di stack. Umumnya pushReplacement digunakan pas ke Home.
+
+### 2. Bagaimana kamu memanfaatkan hierarchy widget seperti Scaffold, AppBar, dan Drawer untuk membangun struktur halaman yang konsisten di seluruh aplikasi?
+
+- Di dalam scaffold utama setiap page, aku membuat appbar sesuai page, kemudian mengimpor left drawer dari left_drawer.dart agar semua page yang memiliki appbar mempunyai drawer yang sama dan konsisten.
+
+### 3. Dalam konteks desain antarmuka, apa kelebihan menggunakan layout widget seperti Padding, SingleChildScrollView, dan ListView saat menampilkan elemen-elemen form? Berikan contoh penggunaannya dari aplikasi kamu.
+
+-  Padding berguna untuk menjaraki satu input form dengan input form yang lainnya. 
+- SingleChildScrollView membuat agar konten bisa discroll, kalo di app aku contohnya di form itu pake SingleChildScrollVIew biar kalau misal isi formnya banyak/layar screennya kekecilan, dia ga bakal overflow eror dan jadinya bisa di scroll.
+- ListView digunakan untuk menampilkan daftar objek dalam susunan yang dapat di scroll. Mirip sama column/row tapi bedanya bisa discroll. Di appku contohnya di left drawer, untuk menyusun elemen2nya itu pakai ListView.
+
+### 4. Bagaimana kamu menyesuaikan warna tema agar aplikasi Football Shop memiliki identitas visual yang konsisten dengan brand toko?
+
+- Dari main.dart khususnya widget MaterialApp, kita dapat menentukan colorScheme dari aplikasi kita. Setelahnya, kalau mau pakai warna dari colorScheme ini kita dapat memanggilnya di page manapun dengan menggunakan Theme.of(context)

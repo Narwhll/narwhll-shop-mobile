@@ -37,7 +37,7 @@ class _ProductFormPageState extends State<ProductFormPage> {
             'Add New Product',
           ),
         ),
-        backgroundColor: Colors.indigo,
+        backgroundColor: Theme.of(context).colorScheme.secondary,
         foregroundColor: Colors.white,
       ),
       drawer: LeftDrawer(),
@@ -78,7 +78,6 @@ class _ProductFormPageState extends State<ProductFormPage> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
-                    maxLines: 5,
                     keyboardType: TextInputType.number,
                     inputFormatters: <TextInputFormatter>[
                       FilteringTextInputFormatter.digitsOnly,
@@ -106,6 +105,7 @@ class _ProductFormPageState extends State<ProductFormPage> {
                 Padding( // buat description
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
+                    maxLines: 5,
                     decoration: InputDecoration(
                       hintText: "Product Description",
                       labelText: "Product Description",
