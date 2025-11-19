@@ -63,3 +63,13 @@
 ### 4. Bagaimana kamu menyesuaikan warna tema agar aplikasi Football Shop memiliki identitas visual yang konsisten dengan brand toko?
 
 - Dari main.dart khususnya widget MaterialApp, kita dapat menentukan colorScheme dari aplikasi kita. Setelahnya, kalau mau pakai warna dari colorScheme ini kita dapat memanggilnya di page manapun dengan menggunakan Theme.of(context)
+
+## TUGAS 9
+
+### Jelaskan mengapa kita perlu membuat model Dart saat mengambil/mengirim data JSON? Apa konsekuensinya jika langsung memetakan Map<String, dynamic> tanpa model (terkait validasi tipe, null-safety, maintainability)?
+
+- Jika kita langsung memetakan tanpa menggunakan model, maka dia tidak akan bisa validasi tipe dulu, jadi bisa saja misal disini harga dianggap sebagai string, bukan integer. Terkait null safety, tanpa model, dart bisa saja memanggil suatu field yang sebenarnya null, kemudian lanjut proses sehingga akan terjadi error null. Jika menggunakan model, kita bisa validasi dulu apakah fieldnya null atau tidak, jika tidak baru lanjut. Terkait maintainability, akan lebih mudah jika menggunakan model karna nama variablenya (nama fieldnya) sudah tersimpan di variable dart, sehingga untuk memanggilnya mudah.
+
+### Apa fungsi package http dan CookieRequest dalam tugas ini? Jelaskan perbedaan peran http vs CookieRequest.
+
+- 
